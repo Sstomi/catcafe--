@@ -7,15 +7,15 @@ export default function Hero() {
         {/* Background image with opacity */}
         <div className="absolute inset-0 bg-hero-image bg-cover opacity-70" />
         
-        {/* Logo - デスクトップでは左上、モバイルでは中央 */}
-        <div className="absolute top-4 left-4 sm:left-8 md:left-12">
-          <div className="relative sm:static flex justify-center w-full">
+        {/* Logo */}
+        <div className="absolute top-4 w-full sm:w-auto">
+          <div className="flex justify-center sm:block">
             <Image
               src="/images/nikukyu-logo.png"
               alt="Nikukyu Cafe Logo"
-              width={120}
-              height={40}
-              className="sm:absolute sm:left-0"
+              width={300}
+              height={50}
+              className="sm:ml-8"
             />
           </div>
         </div>
@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
             <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
               <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                <h2 className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-normal text-primary text-center pt-24 sm:text-4xl md:mx-auto">
+                <h2 className="max-w-lg my-6 text-3xl font-bold leading-none tracking-normal text-primary text-center pt-24 sm:text-4xl md:mx-auto">
                   にくきゅうカフェ
                 </h2>
                 <p className="md:text-lg text-center">
