@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-32">
       <div className="grid gap-16 mb-8 lg:grid-cols-3">
@@ -72,7 +73,7 @@ export default function Footer() {
 
       <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
         <p className="text-gray-600">
-          © Copyright 2020 Nikukyu Cafe All rights reserved.
+          © Copyright {currentYear} Nikukyu Cafe All rights reserved.
         </p>
         <div className="flex items-center mt-4 space-x-4 sm:mt-0">
           <a
