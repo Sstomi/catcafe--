@@ -6,18 +6,26 @@ import Cafe from '@/components/Cafe';
 import Staff from '@/components/Staff';
 import Cta from '@/components/Cta';
 import Footer from '@/components/Footer';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { routing } from '@/src/i18n/routing';
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default function Home() {
   return (
     <main>
+      <div className="absolute top-4 right-4 z-10">
+        <LanguageSwitcher />
+      </div>
       <Hero />
-      <Features /> 
+      <Features />
       <Cats />
       <Cafe />
       <Staff />
       <Cta />
       <Footer />
     </main>
-  )
-   
+  );
 }

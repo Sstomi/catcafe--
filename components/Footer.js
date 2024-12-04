@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
+
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-32">
       <div className="grid gap-16 mb-8 lg:grid-cols-3">
@@ -20,12 +22,9 @@ export default function Footer() {
               />
             </svg>
           </div>
-          <span className="ml-2 text-xl font-bold">address</span>
+          <span className="ml-2 text-xl font-bold">{t('address.title')}</span>
           <div className="mt-4 lg:max-w-sm">
-            <p className="">
-              200-720<br></br>
-              山形県山中市山北町1-2-3
-            </p>
+            <p className="whitespace-pre-line">{t('address.content')}</p>
           </div>
         </div>
         <div className="md:max-w-md">
@@ -40,9 +39,9 @@ export default function Footer() {
               <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
           </div>
-          <span className="ml-2 text-xl font-bold">email</span>
+          <span className="ml-2 text-xl font-bold">{t('email.title')}</span>
           <div className="mt-4 lg:max-w-sm">
-            <p className="">nikukyu@catcafe299.info</p>
+            <p className="whitespace-pre-line">{t('email.content')}</p>
           </div>
         </div>
         <div className="md:max-w-md">
@@ -60,13 +59,9 @@ export default function Footer() {
               />
             </svg>
           </div>
-          <span className="ml-2 text-xl font-bold">Tel</span>
+          <span className="ml-2 text-xl font-bold">{t('tel.title')}</span>
           <div className="mt-4 lg:max-w-sm">
-            <p className="">
-              604-778-6047<br></br>
-              営業時間：11am - 18:pm,<br></br>
-              定休日火曜日（祝日の場合は営業）
-            </p>
+            <p className="whitespace-pre-line">{t('tel.content')}</p>
           </div>
         </div>
       </div>
